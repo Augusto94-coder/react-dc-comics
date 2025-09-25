@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+
+}
+
+/* HEADER */
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.site-header .container {
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  height: 56px;
+  width: auto;
+  margin-right: 3rem;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.main-nav a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #2b2b2b;
+  padding: 22px 0;
+  line-height: 1;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #0282f9;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 4px;
+  border-radius: 2px;
+  background: transparent;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  background: #0282f9;
+}
+
+/* MAIN */
+.hero {
+  background-color: #000;
+  color: #fff;
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 48px 16px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.blue-strip {
+  background: #0282f9;
+  color: #fff;
+}
+
+.strip {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.strip-item {
+  flex: 1 1 160px;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  padding: 10px 8px;
+  border-radius: 12px;
+  transition: transform .12s ease, opacity .12s ease;
+  white-space: nowrap;
+}
+
+.strip-item img {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+.strip-item:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.strip-item:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--muted);
+}
+
+/* FOOTER */
+
+.dc-footer {
+  position: relative;
+  background-image: url('/footer-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 3rem 2rem;
+  overflow: hidden;
+}
+
+.dc-footer_logo-bg {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30%;
+  opacity: 1;
+  z-index: 0;
+}
+
+.dc-footer_inner {
+  width: 20%;
+  margin: 0 2rem;
+}
+
+.dc-footer_columns {
+  display: flex;
+  gap: 3rem;
+}
+
+.dc-col h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0rem;
+}
+
+.dc-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dc-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.dc-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.dc-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.mt {
+  margin-top: 2rem;
+}
+
+.dc-footer-bar {
+  background: #333;
+}
+
+
+.dc-footer-bar_inner {
+  width:100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+
+.dc-signup-btn {
+  width: 10%;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #1683f8;
+  padding: 0.75rem 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.dc-signup-btn:hover {
+  background: #1683f8;
+}
+
+
+.dc-follow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+
+.dc-follow_label {
+  width: 20%;
+  color: #1683f8;
+  font-weight: 800;
+}
+
+.dc-social {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dc-social li a {
+  display: inline-flex;
+}
+
+.dc-social img {
+  width: 35px;
+  height: 35px;
+  display: block;
+  filter: grayscale(10%);
+  opacity: .95;
+}
+
+.dc-social a:hover img {
+  filter: none;
+  opacity: 1;
+}
