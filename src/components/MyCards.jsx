@@ -2,16 +2,15 @@ import MyComics from "./MyComics";
 
 const MyCards = () => {
     return (
-        <>
-        <section className="sfondoNero">
-            <div className="principalContainer flex wrap">
-                <div className="labels">
-                    <MyComics/>
-                    <a href=""><button>LOAD MORE</button></a>
+        
+            <div className="principalContainer">               
+                <div className="cardsWrapper">
+                    <MyComics />
+                </div>
+                <div className="loadMoreContainer">
+                    <button className="loadMoreBtn">LOAD MORE</button>
                 </div>
             </div>
-        </section>
-        </>
     );
 };
 

@@ -1,10 +1,10 @@
-
+import MyCards from "./MyCards";
 const MyMainContent = () => {
     return (
     <>
       <section className="hero">
-        <h1>Content goes here</h1>
-      </section>
+            <MyCards/>
+        </section>
 
       
       <section className="blue-strip">
